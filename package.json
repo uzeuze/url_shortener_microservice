@@ -1,0 +1,24 @@
+{
+  "name": "url_shortener_microservice",
+  "version": "1.0.0",
+  "description": "URL Shortener API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzeuze/url_shortener_microservice.git"
+  },
+  "author": "Egemen Can Uze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uzeuze/url_shortener_microservice/issues"
+  },
+  "homepage": "https://github.com/uzeuze/url_shortener_microservice#readme",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.2"
+  }
+}
