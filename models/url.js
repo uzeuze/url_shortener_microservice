@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 var urlSchema = mongoose.Schema({
-  uid: Number,
+  uid: String,
   url: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
