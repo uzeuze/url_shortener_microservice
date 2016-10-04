@@ -1,5 +1,6 @@
 var express = require("express");
 var Url = require("./models/url");
+var validUrl = require('valid-url');
 var router = express.Router();
 
 router.get('/:id', function(req, res) {
@@ -17,6 +18,9 @@ router.get('/:id', function(req, res) {
 router.get("/new/*", function(req, res) {
   var uid = Math.random().toString(36).slice(-8);
   var url = req.params[0];
+  if (!validUrl.isWebUri(url)) {
+      return res.json({error: "Invalid URL"});
+  }
   var link = Url.create({
     uid: uid,
     url: url
