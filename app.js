@@ -5,7 +5,8 @@ var path = require("path");
 var routes = require("./routes");
 
 var app = express();
-mongoose.connect("mongodb://localhost:27017/test");
+var url = process.env.MONGOLAB_URI || "mongodb://localhost:27017/url-shortener";
+mongoose.connect(url);
 app.set("port", process.env.PORT || 3000);
 
 app.set("views", path.join(__dirname, "views"));
