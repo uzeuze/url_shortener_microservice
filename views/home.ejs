@@ -3,8 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>URL SHORTENER</title>
+    <link rel="stylesheet" href="/home.css" media="screen" charset="utf-8">
   </head>
   <body>
     <h1>URL SHORTENER MICROSERVICE</h1>
+    <p>
+       Pass a URL as a parameter and receive a shortened URL in the JSON response. When you visit shortened URL, it will redirect you to original URL.
+    </p>
+    <h2>Example URL Creation</h2>
+    <code>http://url-shortener-uze.herokuapp.com/new/https://github.com/</code><br>
+    <code>http://url-shortener-uze.herokuapp.com/new/https://www.bitbucket.com/</code>
+    <h2>Example URL Creation Output</h2>
+    <code>{"original_url":"https://github.com/","short_url":"http://url-shortener-uze.herokuapp.com/lev4e7b9"}</code><br>
+    <code>{"original_url":"https://www.bitbucket.com/","short_url":"http://url-shortener-uze.herokuapp.com/89spp66r"}</code>
   </body>
 </html>
